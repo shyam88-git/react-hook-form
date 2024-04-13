@@ -1,9 +1,9 @@
-import Watch from "./pages/Watch";
+import Watch4 from "./pages/watch-example/Watch4";
 
 const App = () => {
   return (
     <div>
-      <Watch />
+      <Watch4 />
     </div>
   );
 };
