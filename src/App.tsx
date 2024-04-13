@@ -1,4 +1,5 @@
 import InputField from "./pages/InputField";
+import RegiserPage from "./pages/RegiserPage";
 import RegisterField from "./pages/RegisterField";
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div>
       <InputField />
       <RegisterField />
+      <RegiserPage />
     </div>
   );
 };
