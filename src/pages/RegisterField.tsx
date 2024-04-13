@@ -1,33 +1,42 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 
-enum Genderenum {
+enum GenderEnum {
   female = "female",
   male = "male",
   other = "other",
 }
 
-interface IFormInput {
-  firstName: string;
-  gender: Genderenum;
-}
-const RegisterField = () => {
-  const { register, handleSubmit } = useForm<IFormInput>();
+type FormInputs = {
+  name: string;
+  gender: GenderEnum;
+};
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+const RegisterField = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<FormInputs>();
+  const onSubmit: SubmitHandler<FormInputs> = (data) => console.log(data);
+  console.log(watch("name"));
+  console.log(watch("gender"));
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <label>First Name</label>
-      <input {...register("firstName")} />
+      <label>Name</label>
+      <input {...register("name", { required: true })} />
+      {errors.name && <span>Name is required</span>}
       <br />
       <br />
 
-      <label>Gender Selection</label>
-      <select {...register("gender")}>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-        <option value="other">Other</option>
+      <label>Gender</label>
+      <select {...register("gender", { required: true })}>
+        <option value="female">female</option>
+        <option value="male">male</option>
+        <option value="other">other</option>
       </select>
-
+      {errors.gender && <span>Please select one gender</span>}
       <br />
       <br />
       <input type="submit" />
