@@ -1,9 +1,9 @@
-import Example from "./pages/Register/Example";
+import Example2 from "./pages/Controller/Example2";
 
 const App = () => {
   return (
     <div>
-      <Example />
+      <Example2 />
     </div>
   );
 };
