@@ -1,9 +1,9 @@
-import Example2 from "./pages/Controller/Example2";
+import Example3 from "./pages/Controller/Example3";
 
 const App = () => {
   return (
     <div>
-      <Example2 />
+      <Example3 />
     </div>
   );
 };
