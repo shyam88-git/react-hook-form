@@ -1,9 +1,9 @@
-import Watch6 from "./pages/watch-example/Watch6";
+import Example from "./pages/Register/Example";
 
 const App = () => {
   return (
     <div>
-      <Watch6 />
+      <Example />
     </div>
   );
 };
