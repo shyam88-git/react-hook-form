@@ -1,9 +1,9 @@
-import Example1 from "./pages/unregister/Example1";
+import Example2 from "./pages/unregister/Example2";
 
 const App = () => {
   return (
     <div>
-      <Example1 />
+      <Example2 />
     </div>
   );
 };
